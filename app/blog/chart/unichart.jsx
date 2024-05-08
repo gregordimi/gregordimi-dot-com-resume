@@ -30,19 +30,18 @@ ChartJS.register(
 
 const UniChart = ({ type, options, data }) => {
   // Determine if the type is specifically for a doughnut chart
-  const renderDoughnut = type === 'doughnut';
-  // Determine if the type is specifically for a line chart
-  const renderLine = type === 'line';
+  const chartComponents = {
+    doughnut: Doughnut,
+    line: Line,
+    // Add other chart types here as needed
+  };
+  
+  const ChartComponent = chartComponents[type] || Chart;  // Fallback to generic Chart if type is not mapped
+  
 
   return (
     <div className="relative max-w-4xl max-h-96 overflow-visible">
-      {renderDoughnut ? (
-        <Doughnut options={options} data={data} />
-      ) : renderLine ? (
-        <Line options={options} data={data} />
-      ) : (
-        <Chart type={type} options={options} data={data} />
-      )}
+        <ChartComponent options={options} data={data} />
       <br/>
     </div>
   );
