@@ -22,9 +22,32 @@ The most visited destinations were in Europe accounting for 79% of the visits, f
 
 Based on the survey, the spread across the different segments of risk and uncertainty attitudes is as follows:
 
-/* -- GRAPH RISK AND UNCERTAINTY -- */
-
-<div id="donut-chart"></div>
+<UniChart 
+  type="doughnut" 
+  options={{
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }} 
+  data={{
+    labels: [
+      'Risk averse, uncertainty averse',
+      'Risk seeking, uncertainty averse',
+      'Risk averse, uncertainty seeking',
+      'Risk seeking, uncertainty seeking'
+    ],
+    datasets: [{
+      data: [139, 127, 168, 13],
+      borderColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+      borderColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+    }]
+  }} 
+/>
 
 ### Main results
 
@@ -323,17 +346,179 @@ In order to present to you how the risk and uncertainty impacts the online trave
 
 **Here is Marilou’s activity on travel related websites as a proportion from her total online activity, both on mobile and desktop.**
 
--- GRAPH MARILOU --
-
-<div id="my-chart"></div>
+<UniChart 
+  type="line" 
+  options={{
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'bottom',
+      },
+      tooltip: {
+        mode: 'index',
+        intersect: false,
+      },
+    },
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Week',
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Percentage of travel-related activity (%)',
+        },
+      },
+    },
+  }} 
+  data={{
+    labels: Array.from({ length: 30 }, (_, i) => i + 1),
+    datasets: [
+        {
+            label: "Desktop, Travel Micro-moments",
+            data: [0, 60, 33.33, 15.79, 35.29, 46.15, 50, 30.77, 21.43, 15.38, 15.79, 42.86, 0, 38.46, 50, 60, 20, 10, 11.54, 50, 25, 31.58, 0, 20, 0, 0, 100, 33.33, 0, 0],
+            fill: false,
+            borderColor: '#DC143C',
+        }, {
+            label: "Desktop, Travel Pageviews",
+            data: [0, 29.49, 16.48, 1.48, 28.32, 27.04, 6.63, 5.16, 6.23, 2.82, 2.07, 39.87, 0, 8.91, 8.97, 12.22, 10.69, 4.81, 1.78, 12.23, 33.27, 3.67, 0, 25.92, 0, 0, 20.25, 27.98, 0, 0],
+            fill: false,
+            borderColor: '#1E90FF',
+        }, {
+            label: "Desktop, Travel Time",
+            data: [0, 33.83, 15.88, .73, 23.78, 22.37, 8.39, 4.92, 5.76, 2.63, 2.99, 52.71, 0, 7.68, 9.65, 9.13, 11.04, 4.91, 2.96, 9.6, 39.14, 4.89, 0, 22.86, 0, 0, 22.72, 45.57, 0, 0],
+            fill: false,
+            borderColor: '#228B22',
+        }, {
+            label: "Desktop, Travel Domains",
+            data: [0, 35.12, 15.77, 4.2, 22.37, 16, 11.59, 8.23, 5.85, 2.49, 2.39, 13, 0, 10.79, 7.64, 12.28, 9.43, 4.69, 1.86, 14.52, 12.14, 6.72, 0, 16.18, 0, 0, 30.19, 12.5, 0, 0],
+            fill: false,
+            borderColor: '#FFD700',
+        }, {
+            label: "Mobile, Travel Micro-moments",
+            data: [28.57, 25.71, 14.39, 11.54, 20.39, 23.81, 17.82, 8.63, 10.26, 20.49, 12.28, 5.93, 22.34, 16, 24.3, 21.43, 18.4, 28.04, 13.71, 16.39, 16.51, 22.54, 3.23, 22.14, 27.71, 29.5, 36.73, 16.39, 13.89, 0],
+            fill: false,
+            borderColor: '#00BFFF',
+            hidden: true, 
+            borderDash: [5,5],
+        }, {
+            label: "Mobile, Travel Pageviews",
+            data: [4.91, 9.85, 14.57, 1.87, 9.63, 5.31, 5.88, 3.94, 3.44, 5.15, 2.41, 1.83, 6, 5, 4.79, 4.83, 8.82, 9.52, 2.95, 6.34, 6.4, 5.81, .71, 4.57, 3.87, 13.07, 21.41, 4.58, 3.52, 0],
+            fill: false,
+            borderColor:  '#D2691E',
+            hidden: true, 
+            borderDash: [5,5],
+        }, {
+            label: "Mobile, Travel Time",
+            data: [1.39, 6.77, 6.82, 1.4, 5.89, 4.01, 2.77, 3.89, 1.14, 2.75, 1.88, .79, 7.45, 1.64, 5.06, 5.58, 7.92, 9.89, 2.24, 3.56, 4.7, 5.52, .23, 2.17, 2.87, 7.32, 20.07, 3.55, 2.92, 0],
+            fill: false,
+            borderColor: '#BA55D3',
+            hidden: true, 
+            borderDash: [5,5],
+        }, {
+            label: "Mobile, Travel Domains & Apps",
+            data: [3.12, 7.73, 8.65, 3.12, 5.56, 4.33, 3.6, 2.06, 3.42, 5.92, 3.25, 2.01, 6.1, 3.61, 5.95, 4.38, 6.2, 8.19, 2.88, 3.26, 4.88, 4.7, .87, 6.24, 5.11, 12.32, 12.49, 5.72, 3.9, 0],
+            fill: false,
+            borderColor: '#FF6347',
+            hidden: true, 
+            borderDash: [5,5],
+        }
+    ]
+}} 
+/>
 
 **Meet Sophie.** She is a 27 year-old woman from South Holland. She earns above average income and she is not very active on the internet compared to the rest of the sample, however, she uses a lot of different sources of information. Sophie is very kind and trustworthy, perhaps a bit naive, sometimes a bit spontaneous, yet she is a stable individual. Sophie is averse towards risk, but uncertainty seeking. Although she was the main decision maker regarding her trip and she uses only internet for planning, she didn’t spend that big of a proportion of her time to decide on her travel activities comparing to Marilou. Sophie went on a short trip to the US with one more person. She spent only a week to plan her trip. She ordered accommodations and entertainment online. They spent approximately 900 EUR per person on the whole trip including transportation and accommodations.
 
 **Here is Sophie’s activity on travel related websites as a proportion from her total online activity, both on mobile and desktop.**
 
--- GRAPH SOPHIE --
-
-<div id="my-chart2"></div>  
+<UniChart 
+  type="line" 
+  options={{
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'bottom',
+      },
+      tooltip: {
+        mode: 'index',
+        intersect: false,
+      },
+    },
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Week',
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Percentage of travel-related activity (%)',
+        },
+      },
+    },
+  }} 
+  data={{
+    labels: Array.from({ length: 30 }, (_, i) => i + 1),
+    datasets: [
+        {
+            label: "Desktop, Travel Micro-moments",
+            data: [66.67, 100, 83.33, 52.38, 36, 58.33, 62.5, 43.75, 57.14, 43.75, 25.81, 33.33, 28.57, 40, 75, 31.25, 45.45, 55.56, 55.56, 37.5, 100, 38.46, 50, 53.85, 70, 100, 50, 38.1, 80, 0],
+            fill: false,
+            borderColor: '#DC143C',
+        }, {
+            label: "Desktop, Travel Pageviews",
+            data: [5.1, 7.11, 1.43, 10.71, 8.14, 4.11, 2, 2.43, 6.8, 6.84, 3.36, 1.17, 1.46, 9.72, 5.3, 1.13, .48, 1.43, 2.16, .25, 1.96, 1.22, .78, 5.19, 13.36, 5.96, 6.69, 9.96, 1.9, 0],
+            fill: false,
+            borderColor: '#1E90FF',
+        }, {
+            label: "Desktop, Travel Time",
+            data: [24.44, 6.13, .94, 12.92, 4.77, 3, 1.79, 1.9, 9.7, 4.63, .94, 1.91, 1.63, 10.06, 7.1, .42, .26, 1.17, .62, 1.16, 2.27, 1.01, .33, 3.04, 15.58, 5.95, 8.96, 5.42, 1.87, 0],
+            fill: false,
+            borderColor: '#228B22',
+        }, {
+            label: "Desktop, Travel Domains",
+            data: [18.52, 9.62, 11.9, 11.11, 11.21, 10.26, 12.07, 10.31, 14.12, 13.25, 9.89, 9.3, 5.56, 14.88, 14.52, 8.7, 4.9, 5.49, 7.27, 3, 8.79, 5.11, 5, 13.56, 17.82, 9.09, 10.31, 8.21, 8.51, 0],
+            fill: false,
+            borderColor: '#FFD700',
+        }, {
+            label: "Mobile, Travel Micro-moments",
+            data: [0, 7.14, 9.09, 0, 8.7, 0, 0, 3.23, 14.29, 0, 13.33, 13.04, 0, 22.58, 0, 0, 0, 0, 5.56, 3.57, 5.26, 0, 10, 25, 11.54, 0, 0, 4, 0, 33.33],
+            fill: false,
+            borderColor: '#00BFFF',
+            hidden: true, 
+            borderDash: [5,5],
+        }, {
+            label: "Mobile, Travel Pageviews",
+            data: [0, 5.71, 17.39, 0, 34.38, 0, 0, .75, 6.67, 0, 3.45, 21.21, 0, 15.44, 0, 0, 0, 0, 4, 47.83, .97, 0, 4.55, 26.25, 22.09, 0, 0, 4, 0, 27.78],
+            fill: false,
+            borderColor:  '#D2691E',
+            hidden: true, 
+            borderDash: [5,5],
+        }, {
+            label: "Mobile, Travel Time",
+            data: [0, 11.55, 7.71, 0, 17.8, 0, 0, 2.02, 3.34, 0, 2.12, 20.34, 0, 11.97, 0, 0, 0, 0, .94, 14.5, .45, 0, .27, 10.32, 13.1, 0, 0, 1.41, 0, 21.23],
+            fill: false,
+            borderColor: '#BA55D3',
+            hidden: true, 
+            borderDash: [5,5],
+        }, {
+            label: "Mobile, Travel Domains & Apps",
+            data: [0, 4, 13.33, 0, 12.5, 0, 0, 2.17, 22.22, 0, 10.53, 12.5, 0, 17.07, 0, 0, 0, 0, 6.25, 7.69, 12.5, 0, 12.5, 22.22, 12.12, 0, 0, 3.7, 0, 40],
+            fill: false,
+            borderColor: '#FF6347',
+            hidden: true, 
+            borderDash: [5,5],
+        }
+    ]
+}} 
+/>
 
 The two graphs clearly indicate the impact on the travel related behavior and the difference between uncertainty averse and seeking attitude. They match with the finding that in terms of micro-moments there is no significant difference between both constructs. In terms of time and pageviews, the aversion plays a big role and increased them significantly comparing Marilou and Sophie.
 

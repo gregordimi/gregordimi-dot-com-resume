@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
-//import Chart from '../blog/chart/charts2';
+import UniChart from '../blog/chart/unichart';
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -98,7 +98,7 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
-  //Chart,
+  UniChart,
 }
 
 export function CustomMDX(props) {
