@@ -32,18 +32,6 @@ export default async function Resume() {
 
   return (
 <>
-<Tabs>
-  <div label="Resume">
-    test
-  </div>
-  <div label="Skills">
-    test skilsl
-  </div>
-  <div label="123">
-    test 123
-  </div>
-</Tabs>
-
 
     <section>
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Resume</h1>
