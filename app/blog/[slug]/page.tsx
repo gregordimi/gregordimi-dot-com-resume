@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
-import { CustomMDX } from 'app/components/mdx'
+import { CustomMDX } from '../../../mdx-components'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
-
+import Image from 'next/image'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
@@ -23,6 +23,7 @@ export function generateMetadata({ params }) {
     publishedAt: publishedTime,
     summary: description,
     image,
+    category,
   } = post.metadata
   let ogImage = image ? image : `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
@@ -88,10 +89,32 @@ export default function Blog({ params }) {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.metadata.publishedAt)}
         </p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          {post.metadata.category}
+        </p>
       </div>
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
+      <footer className="mt-8">
+        <div className="flex items-center justify-center mt-8">
+          <hr className="w-1/2 border-neutral-300 dark:border-neutral-700" />
+          <div className="relative w-12 h-12 bg-white rounded-full shadow-lg">
+            <Image
+              src="/assets/images/profile.png"
+              width={60}
+              height={60}
+              alt="Avatar"
+              className="absolute top-0 left-0 w-full h-full rounded-full object-cover aspect-square"
+
+            />
+          </div>
+          <hr className="w-1/2 border-neutral-300 dark:border-neutral-700" />
+        </div>
+        <a href="/blog" className="text-primary-600 dark:text-primary-400 font-thin">
+          ← Back to Blog
+        </a>
+      </footer>
     </section>
   )
 }

@@ -164,13 +164,29 @@
             "name": "Bayesian Truth Serum Fused Conjoint",
             "publisher": "Erasmus School of Economics",
             "releaseDate": "2017-08-29",
-            "url": "https://thesis.eur.nl/pub/39589"
+            "url": "https://thesis.eur.nl/pub/39589",
+            "type": "Publication"
         },
         {
             "name": "Using behavioral data to shed light on consumers online travel planning",
             "publisher": "Erasmus School of Economics",
             "releaseDate": "2017-01-19",
-            "url": "https://thesis.eur.nl/pub/37131/"
+            "url": "https://thesis.eur.nl/pub/37131/",
+            "type": "Publication"
+        },
+        {
+            "name": "Incentives 2.0 - Using a mathematical truth serum in online surveys",
+            "publisher": "Insight Innovation Exchange (IIEX 2019)/ Amsterdam",
+            "releaseDate": "2019-02",
+            "url": "https://www.greenbook.org/events/iiex-europe/about",
+            "type": "Conference / Speaker"
+        },
+        {
+            "name": "Fashion Wallet - How Zalando measures the fashion spendings in EU",
+            "publisher": "Insight Innovation Exchange (IIEX 2020)/ Amsterdam",
+            "releaseDate": "2020-02",
+            "url": "https://www.greenbook.org/events/iiex-europe/about",
+            "type": "Conference / Speaker"
         }
     ],
     "skills": [
@@ -256,25 +272,20 @@
     "projects": [
         {
             "name": "Probah",
-            "startDate": "2019-01-01",
-            "endDate": "2021-01-01",
-            "description": "Analytical platform",
-            "highlights": [
-                "Won award at AIHacks 2016"
-            ],
+            "startDate": "2024-01-01",
+            "endDate": "2025-01-01",
+            "description": "Analytical platform for research, analysis and reporting",
+            "highlights": [],
             "location": "Berlin-Sofia",
             "url": "https://probah.com/"
             
         },
         {
             "name": "Index",
-            "startDate": "2019-01-01",
-            "endDate": "2021-01-01",
-            "description": "News tracking platform",
-            "highlights": [
-                "Won award at AIHacks 2016",
-                "Won award at AIHacks 2016"
-            ],
+            "startDate": "2024-01-01",
+            "endDate": "2025-01-01",
+            "description": "Media and news tracking platform",
+            "highlights": [],
             "location": "Berlin-Sofia",
             "url": "https://project.com/"
         }

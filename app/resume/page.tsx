@@ -1,6 +1,7 @@
 import { formatDate } from 'app/blog/utils'
 import resumeData from 'app/resume/resume.json'
 import Link from 'next/link'
+import { Tabs } from 'app/mdx-components/tabs'
 
 export const metadata = {
   title: 'Resume',
@@ -30,6 +31,20 @@ export default async function Resume() {
   }
 
   return (
+<>
+<Tabs>
+  <div label="Resume">
+    test
+  </div>
+  <div label="Skills">
+    test skilsl
+  </div>
+  <div label="123">
+    test 123
+  </div>
+</Tabs>
+
+
     <section>
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Resume</h1>
 
@@ -94,16 +109,18 @@ export default async function Resume() {
         </ul>
       </div>
       <div className="m-2">
-      <h2 className="mb-5">Publications</h2>
+      <h2 className="mb-5">Publications and conferences</h2>
         <ul>
           {resumeData.publications.map((pub, index) => (
             <li key={index} className='mb-3'>
-              <strong>{pub.name}</strong> - Published by {pub.publisher} on {formatDate(pub.releaseDate, false, true)}
+              <strong>{pub.name}</strong> @ {pub.publisher} on {formatDate(pub.releaseDate, false, true)} - {pub.type}
               <Link href={pub.url}> (Link)</Link>
             </li>
           ))}
         </ul>
       </div>
     </section>
+    </>
   );
+  
 }

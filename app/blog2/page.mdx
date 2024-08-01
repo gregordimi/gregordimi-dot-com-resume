@@ -1,0 +1,38 @@
+---
+title: 'Bayesian truth serum'
+publishedAt: '2017-08-26'
+summary: 'Bayesian truth serum'
+---
+
+Summary: Bayesian truth serum is a methodology for eliciting subjective judgments. Information score is estimated on question level and assigns high values to common answers and low values to the opposite. The prediction score component of BTS measures the accuracy of the respondent's estimate. A high prediction score indicates a high degree of accuracy and a low score implies a low degree of accuracy.  The information score and prediction score are combined to produce a BTS score. The higher the score, the higher the incentive for truth telling.
+
+### Intro
+
+Bayesian truth serum is a methodology for eliciting subjective judgments and "unverifiable truths", developed by an MIT professor <sup>prelec2004bayesian</sup>. Prelec recognizes the necessity of assessing subjective beliefs in absence of objective truth as opinions, attitudes, and intentions are often used in science and policymaking.
+
+For example, in marketing research, companies have been using respondents' subjective beliefs in order to create policies about products, prices, packages, features, etc. Prelec recognizes that the quality of the subjective data is limited by "its quality of the source" and argues that if respondents act as if they are being evaluated by an "onmicenter scorer in possession of the truth" the data quality will be enhanced. The mechanisms of BTS methodology grants maximum incentives for truth-telling based on Bayesian reasoning.
+Scoring system
+
+BTS is a scoring system that assigns different scores to opinions based on their truthfulness where high scores imply high incentives. BTS consists of two components: information score and prediction score.
+
+### Information score intuition
+
+Information score is estimated on question level and assigns high values to common answers and low values to the opposite. Surprisingly common answers are considered those whose actual frequency is higher than collectively predicted by the same population of interest <sup>prelec2004bayesian</sup>. Once considered an irrational bias, afterward proven as a purely rational effect, the idea behind common/uncommon answers is that opinion holders would overestimate the frequency of their own opinion amongst the population.
+<sup>ross1977false</sup> describe this effect as one "tend to perceive a "false consensus"-to see their own behavioral choices and judgments as relatively common and appropriate to existing circumstances while viewing alternative responses as uncommon, deviant, or inappropriate." More precisely, it is a systematic deviation of assigning higher estimations or probabilities with regards to population frequency in directions of one's own opinion in a group of which the subject is a member.
+
+In his paper, <sup>dawes1989statistical</sup> referred to the "false consensus bias" as "an egocentric bias to overestimate the degree in which others are like us". <sup>ross1977false</sup> executed four studies in which they tested the "false consensus bias" in various settings such as behavioral choices, situations, and judgments as well as personal problems, expectations preferences, and characteristics. For example, a study among Stanford undergraduates <sup>ross1977false</sup> showed that students who think about dying expected that 44% of students, in general, would share their problem against students who don't think about dying expected only 25.6% of the students to think about dying. Within the same experiment subjects who believed to die before turning age of 70 indicated that 57.6% of the students share their expectations while this number was only 43.9% for students with the opposite expectation.
+
+This pattern was considered to be an irrational systematic deviation before <sup>dawes1989statistical</sup> has proven it to be a rational effect. Using Bayesian reasoning Dawes argues that subjects are considering their own opinion to be an "informative sample of one" which shifts the estimation of endorsers of a certain opinion in a direction toward their own opinion.
+
+Using Dawes' interpretation <sup>prelec2004bayesian</sup> constructed a critical assumption; the information score component of BTS which indicates that ones' opinion frequency will be underestimated by the others and vice versa, one will overestimate the frequency of his own opinion. Consequently, this implies that surprisingly common answers are those whose actual frequency overweighs the collectively predicted frequency. For example, let's consider we have data about respondents being asked to state their preferences at binary choice (e.g. Yes/No) question. The respondents are asked to provide their own opinion as well as their estimates about the fraction of people endorsing their answer. If the actual frequency is 10% per "Yes" and the predicted frequency is 5%, the respondents who indicated "Yes" will receive a positive score as their answer will be considered "surprisingly common". However, given the same actual frequency, if the collectively predicted frequency is 25% respondents will be penalized with a negative score as their answers will be considered uncommon.
+
+### Information score formula
+
+The information score component for answer $$k$$ is estimated using the following formula:
+
+
+$$test$$
+
+$$\text{information score} = log(\frac{\overline{x}_{k}}{\overline{y}_{k}})$$
+
+

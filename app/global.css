@@ -68,6 +68,10 @@ html {
   @apply px-1 py-0.5 rounded-lg;
 }
 
+.prose blockquote {
+  @apply border-l-4 border-neutral-200 dark:border-neutral-900 pl-4 my-4;
+}
+
 .prose pre code {
   @apply p-0;
   border: initial;
@@ -147,4 +151,52 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+.prose table {
+  width: 100%; /* Make the table width 100% of its parent */
+  border-collapse: collapse; /* Collapse borders between table cells */
+  margin-top: 20px; /* Add some margin above the table */
+  margin-bottom: 20px; /* Add some margin below the table */
+  margin-left: auto; /* Center the table horizontally */
+  margin-right: auto; /* Center the table horizontally */
+}
+
+.prose table th,
+.prose table td {
+  border: 1px solid #ddd; /* Add a border to table header and cell */
+  padding: 8px; /* Add some padding inside each cell */
+}
+
+.prose table th {
+  background-color: #f8f8f8; /* Add a background color to table headers */
+  text-align: left; /* Align header text to the left */
+}
+
+/* Style the footnotes section. */
+.footnotes {
+  font-size: smaller;
+  color: #8b949e;
+  border-top: 0px solid #30363d;
+}
+
+/* Hide the section label for visual users. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  word-wrap: normal;
+  border: 0;
+}
+
+/* Place `[` and `]` around footnote references. */
+[data-footnote-ref]::before {
+  content: '[';
+}
+
+[data-footnote-ref]::after {
+  content: ']';
 }
