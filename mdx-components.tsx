@@ -1,17 +1,17 @@
-import type { MDXComponents } from 'mdx/types'
+//import type { MDXComponents } from 'mdx/types'
 import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import { MDXProvider } from '@mdx-js/react';
+//import { MDXProvider } from '@mdx-js/react';
 import { highlight } from 'sugar-high'
 import React from 'react'
 import UniChart from './app/blog/chart/unichart'
-import type { MDXRemoteProps } from 'next-mdx-remote/rsc'
+//import type { MDXRemoteProps } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
-import remarkRehype from 'remark-rehype'
+//import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
-import createMDX from '@next/mdx'
+//import createMDX from '@next/mdx'
 import { Tabs } from 'app/mdx-components/tabs'
 
 
@@ -135,7 +135,7 @@ const options = {
 
 
 
-export function CustomMDX(props) {
+export function CustomMDX(props:any) {
   return (
     <MDXRemote
       {...props}
@@ -146,11 +146,11 @@ export function CustomMDX(props) {
 }
 
  
-export function useMDXComponents(components: MDXComponents): MDXComponents {
-  return {
-    ...components,
-  }
-}
+// export function useMDXComponents(components: MDXComponents): MDXComponents {
+//   return {
+//     ...components,
+//   }
+// }
 
 
 
