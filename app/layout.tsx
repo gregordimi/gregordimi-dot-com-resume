@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: 'Grigor Dimitrov Blog',
-    template: '%s | Next.js Portfolio Starter',
+    template: '%s | Grigor Dimitrov Blog',
   },
   description: 'Grigor Dimitrov Blog.',
   openGraph: {
-    title: 'My Blog and portfolio',
+    title: 'Grigor Dimitrov Blog',
     description: 'My Blog and portfolio.',
     url: baseUrl,
     siteName: 'My Portfolio',
