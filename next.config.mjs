@@ -19,7 +19,7 @@ const withMDX = createMDX({
   // Add markdown plugins here, as desired
   options: {
     remarkPlugins: [remarkGfm, remarkMath],
-    rehypePlugins: [remarkRehype, rehypeKatex],
+    rehypePlugins: [rehypeKatex],
   },
 })
  
