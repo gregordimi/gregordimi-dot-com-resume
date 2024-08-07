@@ -10,8 +10,8 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
+  'https://linkedin.com/in/grigordimitrov': {
+    name: 'get in touch@linkedin',
   },
 }
 
